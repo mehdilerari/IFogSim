@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="iFogSim">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="14"/>
+    <property name="source" value="14"/>
+    <path id="iFogSim.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="jars/cloudsim-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-3.0.3.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3.jar"/>
+        <pathelement location="jars/commons-math3-3.5/commons-math3-3.5.jar"/>
+        <pathelement location="jars/guava-18.0.jar"/>
+        <pathelement location="jars/json-simple-1.1.1.jar"/>
+    </path>
+    <path id="run.TestSM.classpath">
+        <path refid="iFogSim.classpath"/>
+        <pathelement location="jars/cloudsim-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-3.0.3.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3.jar"/>
+        <pathelement location="jars/commons-math3-3.5/commons-math3-3.5.jar"/>
+        <pathelement location="jars/guava-18.0.jar"/>
+        <pathelement location="jars/json-simple-1.1.1.jar"/>
+    </path>
+    <path id="run.TestWF.classpath">
+        <path refid="iFogSim.classpath"/>
+        <pathelement location="jars/cloudsim-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-3.0.3.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3.jar"/>
+        <pathelement location="jars/commons-math3-3.5/commons-math3-3.5.jar"/>
+        <pathelement location="jars/guava-18.0.jar"/>
+        <pathelement location="jars/json-simple-1.1.1.jar"/>
+    </path>
+    <path id="run.TestFF.classpath">
+        <path refid="iFogSim.classpath"/>
+        <pathelement location="jars/cloudsim-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-3.0.3.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3.jar"/>
+        <pathelement location="jars/commons-math3-3.5/commons-math3-3.5.jar"/>
+        <pathelement location="jars/guava-18.0.jar"/>
+        <pathelement location="jars/json-simple-1.1.1.jar"/>
+    </path>
+    <path id="run.TestBF.classpath">
+        <path refid="iFogSim.classpath"/>
+        <pathelement location="jars/cloudsim-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-3.0.3.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3-sources.jar"/>
+        <pathelement location="jars/cloudsim-examples-3.0.3.jar"/>
+        <pathelement location="jars/commons-math3-3.5/commons-math3-3.5.jar"/>
+        <pathelement location="jars/guava-18.0.jar"/>
+        <pathelement location="jars/json-simple-1.1.1.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="iFogSim.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="TestSM">
+        <java classname="pfe.fog.entities.TestSM" failonerror="true" fork="yes">
+            <classpath refid="run.TestSM.classpath"/>
+        </java>
+    </target>
+    <target name="TestWF">
+        <java classname="pfe.fog.cmpWF.TestWF" failonerror="true" fork="yes">
+            <classpath refid="run.TestWF.classpath"/>
+        </java>
+    </target>
+    <target name="TestFF">
+        <java classname="pfe.fog.cmpFF.TestFF" failonerror="true" fork="yes">
+            <classpath refid="run.TestFF.classpath"/>
+        </java>
+    </target>
+    <target name="TestBF">
+        <java classname="pfe.fog.cmpBF.TestBF" failonerror="true" fork="yes">
+            <classpath refid="run.TestBF.classpath"/>
+        </java>
+    </target>
+</project>
