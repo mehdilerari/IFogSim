@@ -1,10 +1,3 @@
-![GitHub issues](https://github.com/mehdilerari/IFogSim/?&labelColor=black&color=eb3b5a&label=Issues&logo=issues&logoColor=black&style=for-the-badge)
-![GitHub Contributions](https://github.com/mehdilerari/IFogSim/?&labelColor=black&color=8854d0&style=for-the-badge)
-![repo size](https://github.com/mehdilerari/IFogSim/?label=Repo%20Size&style=for-the-badge&labelColor=black&color=20bf6b)
-![GitHub forks](https://github.com/mehdilerari/IFogSim/?&labelColor=black&color=0fb9b1&style=for-the-badge)
-![GitHub stars](https://github.com/mehdilerari/IFogSim/?&labelColor=black&color=f7b731&style=for-the-badge)
-![GitHub LastCommit](https://github.com/mehdilerari/IFogSim/?logo=github&labelColor=black&color=d1d8e0&style=for-the-badge)
-<br>
 # Project Description
 Fork of IFogSim, redesigned for the implementation of a resource allocation strategy in Fog / Edge computing environments.
 
